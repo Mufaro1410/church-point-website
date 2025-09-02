@@ -38,8 +38,8 @@ const loginModal = document.getElementById('login-modal');
 const closeModal = document.getElementById('close-modal');
 
 signinBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    loginModal.style.display = 'block';
+    // e.preventDefault();
+    // loginModal.style.display = 'block';
 });
 
 closeModal.addEventListener('click', () => {
