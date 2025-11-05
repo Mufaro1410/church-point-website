@@ -27,9 +27,12 @@ jobs:
 
       # Step 2: Inject Supabase config (optional)
       - name: Inject Supabase Config
-        if: secrets.SUPABASE_URL && secrets.SUPABASE_ANON_KEY
         run: |
-          sed 's|__SUPABASE_URL__|${{ secrets.SUPABASE_URL }}|g; s|__SUPABASE_ANON_KEY__|${{ secrets.SUPABASE_ANON_KEY }}|g' config.template.js > config.js
+          if [ -n "${{ secrets.SUPABASE_URL }}" ] && [ -n "${{ secrets.SUPABASE_ANON_KEY }}" ]; then
+            sed 's|__SUPABASE_URL__|${{ secrets.SUPABASE_URL }}|g; s|__SUPABASE_ANON_KEY__|${{ secrets.SUPABASE_ANON_KEY }}|g' config.template.js > config.js
+          else
+            echo "Supabase secrets not set, skipping config injection"
+          fi
 
       # Step 3: Set up GitHub Pages
       - name: Configure GitHub Pages
