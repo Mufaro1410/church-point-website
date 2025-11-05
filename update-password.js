@@ -1,6 +1,11 @@
 // Use the injected config from config.js
-const SUPABASE_URL = window.SUPABASE_CONFIG.url;
-const SUPABASE_ANON_KEY = window.SUPABASE_CONFIG.anonKey;
+// const SUPABASE_URL = window.SUPABASE_CONFIG.url;
+// const SUPABASE_ANON_KEY = window.SUPABASE_CONFIG.anonKey;
+
+// Use placeholders to be replaced at build time
+const SUPABASE_URL = "__SUPABASE_URL__";
+const SUPABASE_ANON_KEY = "__SUPABASE_ANON_KEY__";
+
 
 const updatePasswordForm = document.getElementById('update-password-form');
 const successMessage = document.getElementById('success-message');

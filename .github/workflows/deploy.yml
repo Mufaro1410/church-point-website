@@ -1,50 +1,27 @@
 name: Deploy to GitHub Pages
 
-# Trigger deployment on push to main branch
 on:
   push:
     branches:
-      - main  # change to 'master' if that's your default branch
-
-# Set permissions
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+      - main   # Change if your default branch is different
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      # The deployment URL will be filled in automatically
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # Step 1: Checkout the repo
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Inject Supabase config (optional)
-      - name: Inject Supabase Config
+      # Replace placeholders in JS with secrets
+      - name: Inject Supabase keys
         run: |
-          if [ -n "${{ secrets.SUPABASE_URL }}" ] && [ -n "${{ secrets.SUPABASE_ANON_KEY }}" ]; then
-            sed 's|__SUPABASE_URL__|${{ secrets.SUPABASE_URL }}|g; s|__SUPABASE_ANON_KEY__|${{ secrets.SUPABASE_ANON_KEY }}|g' config.template.js > config.js
-          else
-            echo "Supabase secrets not set, skipping config injection"
-          fi
+          sed -i "s|__SUPABASE_URL__|${{ secrets.SUPABASE_URL }}|g" update-password.js
+          sed -i "s|__SUPABASE_ANON_KEY__|${{ secrets.SUPABASE_ANON_KEY }}|g" update-password.js
 
-      # Step 3: Set up GitHub Pages
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v3
-
-      # Step 4: Upload the site to GitHub Pages (artifact v4 compatible)
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: '.'  # point to your project root (contains index.html, css/, js/)
-
-      # Step 5: Deploy to GitHub Pages
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # Folder containing your index.html
