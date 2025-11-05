@@ -1,10 +1,12 @@
 name: Deploy to GitHub Pages
 
+# Trigger deployment on push to main branch
 on:
   push:
     branches:
-      - main  # Change to 'master' if needed
+      - main  # change to 'master' if that's your default branch
 
+# Set permissions
 permissions:
   contents: read
   pages: write
@@ -15,24 +17,31 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+      # The deployment URL will be filled in automatically
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout
+      # Step 1: Checkout the repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Step 2: Inject Supabase config (optional)
       - name: Inject Supabase Config
+        if: secrets.SUPABASE_URL && secrets.SUPABASE_ANON_KEY
         run: |
           sed 's|__SUPABASE_URL__|${{ secrets.SUPABASE_URL }}|g; s|__SUPABASE_ANON_KEY__|${{ secrets.SUPABASE_ANON_KEY }}|g' config.template.js > config.js
 
-      - name: Setup Pages
+      # Step 3: Set up GitHub Pages
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1  # <-- change to v1 (latest supported version)
+      # Step 4: Upload the site to GitHub Pages (artifact v4 compatible)
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          path: '.'
+          path: '.'  # point to your project root (contains index.html, css/, js/)
 
+      # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
