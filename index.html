@@ -12,7 +12,36 @@
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
-                <i class="fas fa-church"></i>
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Pin shape background -->
+                        <path d="M50 5 C30 5, 15 20, 15 40 C15 55, 25 70, 50 115 C75 70, 85 55, 85 40 C85 20, 70 5, 50 5 Z" 
+                            fill="#f4b95f" stroke="#1a3a52" stroke-width="5"/>
+                        
+                        <!-- Church building -->
+                        <g transform="translate(50, 45)">
+                            <!-- Cross -->
+                            <rect x="-2" y="-25" width="4" height="12" fill="#1a3a52"/>
+                            <rect x="-5" y="-18" width="10" height="4" fill="#1a3a52"/>
+                            
+                            <!-- Roof/Steeple -->
+                            <path d="M-12 -8 L0 -15 L12 -8 Z" fill="#1a3a52"/>
+                            
+                            <!-- Upper window -->
+                            <rect x="-3" y="-10" width="6" height="8" rx="3" fill="#f4b95f"/>
+                            
+                            <!-- Main building -->
+                            <rect x="-15" y="0" width="30" height="25" fill="#1a3a52"/>
+                            
+                            <!-- Door -->
+                            <path d="M-6 25 L-6 12 Q-6 8, 0 8 Q6 8, 6 12 L6 25 Z" fill="#f4b95f"/>
+                            
+                            <!-- Side extensions -->
+                            <polygon points="-15,10 -20,15 -20,25 -15,25" fill="#1a3a52"/>
+                            <polygon points="15,10 20,15 20,25 15,25" fill="#1a3a52"/>
+                        </g>
+                    </svg>
+                </div>
                 Church Point
             </a>
             <div class="menu-toggle" id="menu-toggle">
@@ -175,48 +204,20 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-title">
-                <h2>Simple Pricing</h2>
-                <p>Choose the plan that works for your church</p>
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your congregation size</p>
             </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price">$49<span>/month</span></div>
-                    <p>For small churches up to 50 members</p>
-                    <ul class="pricing-features">
-                        <li>Basic Member Management</li>
-                        <li>Event Calendar</li>
-                        <li>Donation Tracking</li>
-                        <li>Email Support</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline">Get Started</a>
+            
+            <div class="member-selector">
+                <label for="member-count">Number of Members:</label>
+                <input type="range" id="member-count" min="0" max="6" value="2" step="1">
+                <div class="member-display">
+                    <span id="member-value">250</span> members
                 </div>
-                <div class="pricing-card featured">
-                    <h3>Growth</h3>
-                    <div class="price">$99<span>/month</span></div>
-                    <p>For growing churches up to 200 members</p>
-                    <ul class="pricing-features">
-                        <li>Advanced Member Management</li>
-                        <li>Group Management</li>
-                        <li>Online Giving Integration</li>
-                        <li>Text Messaging</li>
-                        <li>Priority Support</li>
-                    </ul>
-                    <a href="#" class="btn">Get Started</a>
-                </div>
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price">$199<span>/month</span></div>
-                    <p>For large churches with 200+ members</p>
-                    <ul class="pricing-features">
-                        <li>Unlimited Members</li>
-                        <li>Advanced Analytics</li>
-                        <li>Custom Forms & Fields</li>
-                        <li>API Access</li>
-                        <li>Dedicated Account Manager</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline">Get Started</a>
-                </div>
+            </div>
+
+            <div class="pricing-grid" id="pricing-cards">
+                <!-- Cards will be dynamically generated -->
             </div>
         </div>
     </section>
