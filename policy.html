@@ -14,14 +14,14 @@
         }
 
         :root {
-            --primary: #4a6fdc;
-            --secondary: #6c4adc;
-            --accent: #f39c12;
-            --light: #f8f9fa;
-            --dark: #2c3e50;
+            --primary: #1a3a52;
+            --secondary: #f4b95f;
+            --accent: #f4b95f;
+            --light: #a8b8bd;
+            --dark: #1a3a52;
             --text: #333;
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+            --gradient: linear-gradient(135deg, var(--primary), #2d5773);
         }
 
         body {
@@ -64,8 +64,30 @@
             text-decoration: none;
         }
 
+        .logo-icon {
+            width: 40px;
+            height: 50px;
+            position: relative;
+        }
+
+        .logo-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
         .logo i {
-            color: var(--secondary);
+            display: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        nav ul li a.btn {
+            padding: 8px 20px;
+            font-size: 1rem;
         }
 
         nav ul {
@@ -219,7 +241,7 @@
         }
 
         .contact-box a {
-            color: var(--primary);
+            color: var(--light);
             text-decoration: none;
             font-weight: 600;
         }
@@ -327,7 +349,22 @@
     <header>
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <i class="fas fa-church"></i>
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 5 C30 5, 15 20, 15 40 C15 55, 25 70, 50 115 C75 70, 85 55, 85 40 C85 20, 70 5, 50 5 Z" 
+                            fill="#f4b95f" stroke="#1a3a52" stroke-width="5"/>
+                        <g transform="translate(50, 45)">
+                            <rect x="-2" y="-25" width="4" height="12" fill="#1a3a52"/>
+                            <rect x="-5" y="-18" width="10" height="4" fill="#1a3a52"/>
+                            <path d="M-12 -8 L0 -15 L12 -8 Z" fill="#1a3a52"/>
+                            <rect x="-3" y="-10" width="6" height="8" rx="3" fill="#f4b95f"/>
+                            <rect x="-15" y="0" width="30" height="25" fill="#1a3a52"/>
+                            <path d="M-6 25 L-6 12 Q-6 8, 0 8 Q6 8, 6 12 L6 25 Z" fill="#f4b95f"/>
+                            <polygon points="-15,10 -20,15 -20,25 -15,25" fill="#1a3a52"/>
+                            <polygon points="15,10 20,15 20,25 15,25" fill="#1a3a52"/>
+                        </g>
+                    </svg>
+                </div>
                 Church Point
             </a>
             <nav>
@@ -451,10 +488,10 @@
                         <p>To request the deletion of your account and personal data:</p>
                         <ul style="margin: 15px 0; padding-left: 25px;">
                             <li>Contact your church administrator, or</li>
-                            <li>Email us directly at: <a href="mailto:info@churchpoint.com?subject=Account%20Deletion%20Request">info@churchpoint.com</a> with "Account Deletion Request" in the subject line</li>
+                            <li>Email us directly at: <a href="mailto:info@churchpoint.com?subject=Account%20Deletion%20Request">churchpointorg@gmail.com</a> with "Account Deletion Request" in the subject line</li>
                         </ul>
                         <p style="margin-top: 15px;"><strong>Note:</strong> Account deletion is permanent and cannot be undone. All your data will be removed from our systems within 30 days of verification.</p>
-                        <a href="mailto:info@churchpoint.com?subject=Account%20Deletion%20Request&body=I%20would%20like%20to%20request%20the%20deletion%20of%20my%20Church%20Point%20account.%0A%0AName%3A%20%0AEmail%3A%20%0AChurch%3A%20%0A%0APlease%20confirm%20when%20my%20account%20has%20been%20deleted." class="btn" style="margin-top: 15px; display: inline-block;">Request Account Deletion</a>
+                        <a href="mailto:churchpoint@gmail.com?subject=Account%20Deletion%20Request&body=I%20would%20like%20to%20request%20the%20deletion%20of%20my%20Church%20Point%20account.%0A%0AName%3A%20%0AEmail%3A%20%0AChurch%3A%20%0A%0APlease%20confirm%20when%20my%20account%20has%20been%20deleted." class="btn" style="margin-top: 15px; display: inline-block;">Request Account Deletion</a>
                     </div>
                 </div>
 
