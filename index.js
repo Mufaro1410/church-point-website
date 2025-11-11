@@ -148,21 +148,38 @@ updateSlider(2); // 250 members
 
 
 // Android APK Download
+// Android APK Download
 const androidDownloadBtn = document.getElementById('android-download');
 
 androidDownloadBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    // Replace with your actual APK download URL
-    const apkUrl = 's3://churchpointorg/application-42ee1783-858f-431e-bc9e-cbc23bb861c4.apk';
     
-    // Create a temporary link to trigger download
-    const link = document.createElement('a');
-    link.href = apkUrl;
-    link.download = 'application-42ee1783-858f-431e-bc9e-cbc23bb861c4.apk';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Use the direct S3 object URL (not the console URL)
+    const apkUrl = 'https://churchpointorg.s3.af-south-1.amazonaws.com/application-42ee1783-858f-431e-bc9e-cbc23bb861c4.apk';
+    
+    // Direct download
+    window.location.href = apkUrl;
     
     // Show a confirmation message
-    alert('Your download will begin shortly. Please enable "Install from Unknown Sources" in your Android settings to install the app.');
+    setTimeout(() => {
+        alert('Your download will begin shortly. Please enable "Install from Unknown Sources" in your Android settings to install the app.');
+    }, 100);
 });
+// const androidDownloadBtn = document.getElementById('android-download');
+
+// androidDownloadBtn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     // Replace with your actual APK download URL
+//     const apkUrl = 'https://af-south-1.console.aws.amazon.com/s3/object/churchpointorg?region=af-south-1&prefix=application-42ee1783-858f-431e-bc9e-cbc23bb861c4.apk';
+    
+//     // Create a temporary link to trigger download
+//     const link = document.createElement('a');
+//     link.href = apkUrl;
+//     link.download = 'application-42ee1783-858f-431e-bc9e-cbc23bb861c4.apk';
+//     document.body.appendChild(link);
+//     link.click();
+//     document.body.removeChild(link);
+    
+//     // Show a confirmation message
+//     alert('Your download will begin shortly. Please enable "Install from Unknown Sources" in your Android settings to install the app.');
+// });
