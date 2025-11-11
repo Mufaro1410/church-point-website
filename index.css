@@ -265,6 +265,120 @@ nav ul li a.btn-outline {
     margin: 0 auto 20px;
 }
 
+/* App Download Section */
+.app-download {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #2d5773 0%, var(--primary) 100%);
+    color: white;
+}
+
+.app-download-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.app-download-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.app-download-text > p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s;
+    min-width: 180px;
+}
+
+.download-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn i {
+    font-size: 2.5rem;
+}
+
+.download-btn div {
+    text-align: left;
+}
+
+.download-btn span {
+    font-size: 0.75rem;
+    display: block;
+    opacity: 0.8;
+}
+
+.download-btn strong {
+    font-size: 1.1rem;
+    display: block;
+}
+
+.download-note {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.app-download-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-download-image i {
+    font-size: 15rem;
+    opacity: 0.2;
+}
+
+@media (max-width: 768px) {
+    .app-download-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .app-download-text h2 {
+        font-size: 2rem;
+    }
+    
+    .download-buttons {
+        flex-direction: column;
+    }
+    
+    .download-btn {
+        width: 100%;
+    }
+    
+    .app-download-image {
+        display: none;
+    }
+}
+
 /* Testimonials */
 .testimonials {
     padding: 80px 0;
