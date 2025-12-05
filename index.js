@@ -155,7 +155,7 @@ androidDownloadBtn.addEventListener('click', (e) => {
     e.preventDefault();
     
     // Use the direct S3 object URL (not the console URL)
-    const apkUrl = 'https://churchpointorg.s3.af-south-1.amazonaws.com/application-42ee1783-858f-431e-bc9e-cbc23bb861c4.apk';
+    const apkUrl = 'https://churchpointorg-apk.s3.af-south-1.amazonaws.com/application-42ee1783-858f-431e-bc9e-cbc23bb861c4.apk';
     
     // Direct download
     window.location.href = apkUrl;
