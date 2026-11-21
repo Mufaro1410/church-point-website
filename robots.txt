@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /reset-password
+Disallow: /update-password
+Sitemap: https://churchpointorg.com/sitemap.xml

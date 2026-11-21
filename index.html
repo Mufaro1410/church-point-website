@@ -1,345 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Church Point - Church Management Solution</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Pin shape background -->
-                        <path d="M50 5 C30 5, 15 20, 15 40 C15 55, 25 70, 50 115 C75 70, 85 55, 85 40 C85 20, 70 5, 50 5 Z" 
-                            fill="#f4b95f" stroke="#1a3a52" stroke-width="5"/>
-                        
-                        <!-- Church building -->
-                        <g transform="translate(50, 45)">
-                            <!-- Cross -->
-                            <rect x="-2" y="-25" width="4" height="12" fill="#1a3a52"/>
-                            <rect x="-5" y="-18" width="10" height="4" fill="#1a3a52"/>
-                            
-                            <!-- Roof/Steeple -->
-                            <path d="M-12 -8 L0 -15 L12 -8 Z" fill="#1a3a52"/>
-                            
-                            <!-- Upper window -->
-                            <rect x="-3" y="-10" width="6" height="8" rx="3" fill="#f4b95f"/>
-                            
-                            <!-- Main building -->
-                            <rect x="-15" y="0" width="30" height="25" fill="#1a3a52"/>
-                            
-                            <!-- Door -->
-                            <path d="M-6 25 L-6 12 Q-6 8, 0 8 Q6 8, 6 12 L6 25 Z" fill="#f4b95f"/>
-                            
-                            <!-- Side extensions -->
-                            <polygon points="-15,10 -20,15 -20,25 -15,25" fill="#1a3a52"/>
-                            <polygon points="15,10 20,15 20,25 15,25" fill="#1a3a52"/>
-                        </g>
-                    </svg>
-                </div>
-                Church Point
-            </a>
-            <div class="menu-toggle" id="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#download">Download</a></li>
-                    <li><a href="http://churchpointorg.s3-website.af-south-1.amazonaws.com" class="btn btn-outline" id="signin-btn" target="_blank">Sign In</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Church Point | Church management for Zimbabwe</title><meta name="description" content="Church Point brings members, events, giving and community together. A web admin for church leaders and a mobile app for members, priced from $20 a month.">
+<link rel="canonical" href="https://churchpointorg.com/">
+<meta name="theme-color" content="#14304a">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Church Point">
+<meta property="og:title" content="Church Point | Church management for Zimbabwe"><meta property="og:description" content="Church Point brings members, events, giving and community together. A web admin for church leaders and a mobile app for members, priced from $20 a month.">
+<meta property="og:url" content="https://churchpointorg.com/"><meta property="og:image" content="https://churchpointorg.com/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/site.css"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Church Point","url":"https://churchpointorg.com/","logo":"https://churchpointorg.com/assets/img/logo.svg","parentOrganization":{"@type":"Organization","name":"Fun Tech Solutions"}},{"@type":"SoftwareApplication","name":"Church Point","applicationCategory":"BusinessApplication","operatingSystem":"iOS, Android, Web","offers":{"@type":"Offer","price":"20","priceCurrency":"USD"}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who is Church Point for?", "acceptedAnswer": {"@type": "Answer", "text": "Churches of any size. Pastors and administrators use the web admin to run the church, and members use the mobile app on iPhone or Android to stay connected."}}, {"@type": "Question", "name": "Do my members have to pay?", "acceptedAnswer": {"@type": "Answer", "text": "No. The subscription is paid by the church. The member app is free to download."}}, {"@type": "Question", "name": "Which currencies can we record?", "acceptedAnswer": {"@type": "Answer", "text": "You can record giving and expenses in more than one currency, set your own exchange rate against the US dollar, and see every report per currency."}}, {"@type": "Question", "name": "Is our members' data safe?", "acceptedAnswer": {"@type": "Answer", "text": "Data is stored in a managed database over encrypted connections, and each leader only sees what their role allows. Read the details in our Privacy Policy."}}]}</script>
+</head><body><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol><symbol id="i-wallet" viewBox="0 0 24 24"><path d="M20 12V8H6a2 2 0 0 1 0-4h12v4"/><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol><symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-qr" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14z"/><path d="M20 17v4H6.5A2.5 2.5 0 0 1 4 19.5"/></symbol><symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2v1zM3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2v1z"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol><symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m21 2-9.6 9.6M15.5 7.5 18 10"/></symbol><symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol><symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></symbol><symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v6M14 11v6"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to content</a><header class="hdr"><div class="wrap">
+<a class="brand" href="index.html" aria-label="Church Point home"><img src="assets/img/logo.svg" alt="" width="30" height="36">Church Point</a>
+<button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
+<nav class="nav" id="nav" aria-label="Main"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="download.html">Get the app</a><a href="about.html">About</a><a href="support.html">Support</a><a href="contact.html" class="btn btn-primary btn-sm">Request a demo</a><a href="#" data-admin class="btn btn-ghost btn-sm">Sign in</a></nav>
+</div></header><main id="main">
+<section class="hero"><div class="wrap"><div>
+<span class="eyebrow">Church management, made for Zimbabwe</span>
+<h1>Run your church with <em>clarity</em>. Stay close to your people.</h1>
+<p class="lead">Church Point brings your members, events, giving and community into one place: a web admin for leaders and a mobile app for every member.</p>
+<div class="cta-row"><a class="btn btn-primary" href="contact.html">Request a demo <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="features.html">See what it does</a></div>
+<ul class="meta"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>iPhone and Android</li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Priced in US dollars</li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>From $20 a month</li></ul></div>
+<div class="stage"><div class="float f1"><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg> Service reminder sent</div><div class="phone"><div class="screen" data-shot="home" data-alt="Church Point app: Grace Fellowship">
+<div class="m-top"><small>Welcome back</small><b>Grace Fellowship</b></div>
+<div class="m-body"><div class="m-card"><span class="m-chip">Sunday 9:00</span><b>Morning Service</b><span>Main hall · RSVP open</span></div>
+<div class="m-card"><b>Announcement</b><span>Youth camp registration is open</span></div><div class="m-card"><b>Prayer wall</b><span>3 new requests from your church</span></div></div>
+<div class="m-tabs"><i></i><i></i><i></i><i></i><i></i></div></div></div><div class="float f2"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> Checked in by QR</div></div></div></section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>Streamline Your Church Management</h1>
-            <p>Church Point is the all-in-one solution for managing members, events, donations, and communications - so you can focus on your ministry.</p>
-            <div class="hero-buttons">
-                <a href="#pricing" class="btn">Get Started</a>
-                <a href="#features" class="btn btn-outline">Learn More</a>
-            </div>
-        </div>
-    </section>
+<section class="alt"><div class="wrap"><div class="head center rv"><span class="eyebrow">Two apps, one church</span><h2>Built for leaders and members</h2><p class="lead">Everything the office needs, and everything a member wants, connected from the start.</p></div>
+<div class="grid g2"><div class="card rv"><div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-layers"/></svg></div><h3>For pastors and administrators</h3><p>Manage members and groups, plan events, record giving and expenses, send announcements and review reports on the web admin from any computer.</p></div>
+<div class="card rv"><div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></div><h3>For members</h3><p>See events and RSVP, read announcements, listen to sermons, follow Bible reading plans, share prayer requests and testimonies, and give, all from the phone.</p></div></div></div></section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Powerful Features</h2>
-                <p>Everything you need to manage your church effectively</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Member Management</h3>
-                    <p>Keep track of members, families, and groups with our easy-to-use directory and profile system.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>Event Planning</h3>
-                    <p>Schedule services, meetings, and events with automatic reminders and attendance tracking.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-donate"></i>
-                    </div>
-                    <h3>Donation Tracking</h3>
-                    <p>Manage tithes and offerings with secure giving options and automated contribution statements.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    <h3>Communication Tools</h3>
-                    <p>Send emails, texts, and push notifications to keep your congregation informed and engaged.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>Reporting & Analytics</h3>
-                    <p>Gain insights with customizable reports on attendance, giving, and member engagement.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Mobile App</h3>
-                    <p>Access Church Point anywhere with our dedicated iOS and Android applications.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section><div class="wrap"><div class="head center rv"><span class="eyebrow">What you get</span><h2>Everything a church office needs</h2></div>
+<div class="grid g3"><div class="card rv"><div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></div><h3>Members & groups</h3><p>One directory for every member, with cell groups, ministries, courses and age groups you define yourself.</p></div><div class="card rv"><div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg></div><h3>Events & attendance</h3><p>Publish events, take RSVPs, send reminders the day before and on the day, and check people in by QR code.</p></div><div class="card rv"><div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg></div><h3>Giving & expenses</h3><p>Record tithes and offerings in several currencies, accept online giving through Paynow, and track what the church spends.</p></div><div class="card rv"><div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-megaphone"/></svg></div><h3>Announcements</h3><p>Reach everyone at once with announcements and push notifications to the members’ phones.</p></div><div class="card rv"><div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg></div><h3>Reports</h3><p>Giving and expense reports per currency, member and age-group reports, with CSV export and print.</p></div><div class="card rv"><div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></div><h3>Roles & permissions</h3><p>Give each leader exactly the access they need, from finance to events to moderation.</p></div></div>
+<p class="center" style="margin-top:32px"><a class="btn btn-dark" href="features.html">See all features <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></p></div></section>
 
-    <!-- How It Works -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <div class="section-title">
-                <h2>How Church Point Works</h2>
-                <p>Get started in three simple steps</p>
-            </div>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Sign Up</h3>
-                    <p>Create your church's account and customize your settings</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>On-Board Members</h3>
-                    <p>Members register themselves using mobile app</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Start Managing</h3>
-                    <p>Begin using Church Point to streamline your operations</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="alt"><div class="wrap"><div class="head center rv"><span class="eyebrow">Getting started</span><h2>Up and running in three steps</h2></div>
+<div class="steps"><div class="step rv"><h3>Request a demo</h3><p>Tell us about your church. We will show you the web admin and the member app.</p></div>
+<div class="step rv"><h3>We set up your church</h3><p>Your account, groups, age groups and roles are set up the way your church works.</p></div>
+<div class="step rv"><h3>Members join in the app</h3><p>Members download Church Point, join your church and start receiving events and announcements.</p></div></div></div></section>
 
-    <!-- Mobile App Download Section -->
-    <section class="app-download" id="download">
-        <div class="container">
-            <div class="app-download-content">
-                <div class="app-download-text">
-                    <h2>Download Church Point Mobile App</h2>
-                    <p>Experience the full power of Church Point on your mobile device. Stay connected with your congregation anytime, anywhere.</p>
-                    <div class="download-buttons">
-                        <a href="#" class="download-btn android-btn" id="android-download">
-                            <i class="fab fa-android"></i>
-                            <div>
-                                <span>Get it on</span>
-                                <strong>Android APK</strong>
-                            </div>
-                        </a>
-                        <a href="#" class="download-btn ios-btn">
-                            <i class="fab fa-apple"></i>
-                            <div>
-                                <span>Download on the</span>
-                                <strong>App Store</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <p class="download-note">
-                        <i class="fas fa-info-circle"></i> 
-                        For Android: Enable "Install from Unknown Sources" in your device settings
-                    </p>
-                </div>
-                <div class="app-download-image">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="dark"><div class="wrap split"><div class="rv"><span class="eyebrow">Giving</span><h2>Clear books, in the currencies you use</h2>
+<p>Record giving and expenses in more than one currency, set your own rate against the US dollar, and see every report per currency. Members can give online through Paynow.</p>
+<ul class="ticks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Giving and expenses kept separate and easy to review</li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Records are voided, never deleted, so the history stays honest</li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Export reports to CSV or print them for the church board</li></ul></div>
+<div class="grid rv"><div class="panel"><h3>Per-currency reports</h3><p>No mixing of dollars and local currency. Every total is shown in the currency it was given in.</p></div><div class="panel"><h3>Role-based access</h3><p>Only the leaders you choose can see or change finance records.</p></div></div></div></section>
 
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>What Pastors Say</h2>
-                <p>Join thousands of churches using Church Point</p>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Church Point has transformed how we manage our congregation. We've saved countless hours on administrative tasks."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">PD</div>
-                        <div>
-                            <h4>Pastor David</h4>
-                            <p>Grace Community Church</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "The donation tracking features alone are worth it. Our financial management has never been easier."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SR</div>
-                        <div>
-                            <h4>Sarah Roberts</h4>
-                            <p>Faith Lutheran Church</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Our member engagement has increased significantly since using Church Point's communication tools."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MJ</div>
-                        <div>
-                            <h4>Minister James</h4>
-                            <p>New Hope Baptist</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section><div class="wrap split"><div class="grid rv"><div class="card"><div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></div><h3>A prayer wall members can trust</h3><p>Prayer requests and testimonies, with a language filter, report and block tools, and a moderation queue for church leaders.</p></div><div class="card"><div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg></div><h3>Share with leaders only</h3><p>Sensitive requests can go to church leaders instead of the community feed.</p></div></div>
+<div class="rv"><span class="eyebrow">Safe community</span><h2>Care for the whole church family</h2><p class="lead">Church Point is used by members of every age, so safety is built in: terms every member accepts, parent or guardian consent for children under 13, and leaders who can act on a report quickly.</p>
+<ul class="ticks"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Reported posts are hidden and reviewed by your church leaders</li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Leaders can remove a post or a member who breaks the rules</li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Members can delete their own account in the app</li></ul></div></div></section>
 
-    <!-- Pricing -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-title">
-                <h2>Simple, Transparent Pricing</h2>
-                <p>Choose the plan that fits your congregation size</p>
-            </div>
-            
-            <div class="member-selector">
-                <label for="member-count">Number of Members:</label>
-                <input type="range" id="member-count" min="0" max="6" value="2" step="1">
-                <div class="member-display">
-                    <span id="member-value">250</span> members
-                </div>
-            </div>
+<section class="alt"><div class="wrap"><div class="head center rv"><span class="eyebrow">Pricing</span><h2>Simple pricing that grows with your church</h2><p class="lead">Every plan includes every feature. You choose by the size of your congregation.</p></div>
+<div class="plans" data-plans></div><noscript><p class="center"><a href="pricing.html">See our pricing</a></p></noscript>
+<p class="center" style="margin-top:28px"><a href="pricing.html">Compare plans and billing options <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></p></div></section>
 
-            <div class="pricing-grid" id="pricing-cards">
-                <!-- Cards will be dynamically generated -->
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Transform Your Church Management?</h2>
-            <p>Join thousands of churches using Church Point to save time, increase engagement, and streamline operations.</p>
-            <a href="#" class="btn">Get Started Today</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-column">
-                    <h3>Church Point</h3>
-                    <p>The complete church management solution for congregations of all sizes.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Features</h3>
-                    <ul>
-                        <li><a href="index.html#features">Member Management</a></li>
-                        <li><a href="index.html#features">Church Community</a></li>
-                        <li><a href="index.html#features">Event Management</a></li>
-                        <li><a href="index.html#features">Communication Tools</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Support Center</a></li>
-                        <li><a href="#">Webinars</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="policy.html">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><i class="fas fa-envelope"></i> info@churchpoint.com</li>
-                        <li><i class="fas fa-phone"></i> +1 (800) 123-4567</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Church Point. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Login Modal -->
-    <div id="login-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000;">
-        <div style="position: relative; background: white; width: 90%; max-width: 400px; margin: 100px auto; padding: 30px; border-radius: 10px; box-shadow: 0 5px 25px rgba(0,0,0,0.2);">
-            <button id="close-modal" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
-            <h2 style="text-align: center; margin-bottom: 20px; color: var(--primary);">Sign In to Church Point</h2>
-            <form>
-                <div style="margin-bottom: 20px;">
-                    <label for="email" style="display: block; margin-bottom: 5px; font-weight: 600;">Email Address</label>
-                    <input type="email" id="email" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;" placeholder="Your email address">
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <label for="password" style="display: block; margin-bottom: 5px; font-weight: 600;">Password</label>
-                    <input type="password" id="password" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;" placeholder="Your password">
-                </div>
-                <button type="submit" class="btn" style="width: 100%;">Sign In</button>
-            </form>
-            <p style="text-align: center; margin-top: 20px;">
-                <a href="#" style="color: var(--primary);">Forgot your password?</a>
-            </p>
-            <p style="text-align: center; margin-top: 10px;">
-                Don't have an account? <a href="#pricing" style="color: var(--primary); font-weight: 600;">Sign up</a>
-            </p>
-        </div>
-    </div>
-
-    <script src="index.js"></script>
-</body>
-</html>
+<section><div class="wrap"><div class="head center rv"><span class="eyebrow">Questions</span><h2>Good to know</h2></div><div class="faq"><details><summary>Who is Church Point for?</summary><div><p>Churches of any size. Pastors and administrators use the web admin to run the church, and members use the mobile app on iPhone or Android to stay connected.</p></div></details><details><summary>Do my members have to pay?</summary><div><p>No. The subscription is paid by the church. The member app is free to download.</p></div></details><details><summary>Which currencies can we record?</summary><div><p>You can record giving and expenses in more than one currency, set your own exchange rate against the US dollar, and see every report per currency.</p></div></details><details><summary>Is our members’ data safe?</summary><div><p>Data is stored in a managed database over encrypted connections, and each leader only sees what their role allows. Read the details in our <a href="policy.html">Privacy Policy</a>.</p></div></details></div><p class="center" style="margin-top:24px"><a href="support.html">More answers in Support</a></p></div></section>
+<section><div class="wrap"><div class="band rv"><h2>Ready to see Church Point with your church?</h2><p>Tell us about your church and we will set up a short demo and help you get started.</p><div class="cta-row"><a class="btn btn-primary" href="contact.html">Request a demo <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="pricing.html">See pricing</a></div></div></div></section></main><footer class="ftr"><div class="wrap"><div class="cols">
+<div><a class="brand" href="index.html"> Church Point</a><p>Church management for congregations in Zimbabwe and beyond. A web admin for leaders, a mobile app for members.</p></div>
+<div><h3>Product</h3><ul><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="download.html">Get the app</a></li><li><a href="#" data-admin>Sign in</a></li></ul></div>
+<div><h3>Company</h3><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Request a demo</a></li><li><a href="support.html">Support</a></li><li><a href="#" data-email>email</a></li></ul></div>
+<div><h3>Legal</h3><ul><li><a href="policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="delete-account.html">Delete your account</a></li></ul></div>
+</div><div class="legal"><span>&copy; <span data-year>2026</span> Fun Tech Solutions. All rights reserved.</span><span>Made for churches in Zimbabwe.</span></div></div></footer>
+<script src="assets/js/site-config.js"></script><script src="assets/js/site.js"></script></body></html>
